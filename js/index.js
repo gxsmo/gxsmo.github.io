@@ -1,3 +1,8 @@
-document.getElementById("home").addEventListener("click", function() {
-    window.open("../html/index.html","_self")
-})
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
