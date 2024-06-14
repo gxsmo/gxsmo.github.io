@@ -11,10 +11,9 @@ body {
     padding: 0px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 80px 1fr 1fr 60px;
+    grid-template-rows: 80px 1fr 50px;
     grid-template-areas: 
     'header'
-    'main'
     'main'
     'footer';
 }
@@ -33,7 +32,10 @@ header {
 main {
     background-color: var(--light-purple-1);
     grid-area: main;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
 }
 footer {
     background-color: var(--light-purple-2);
@@ -50,7 +52,7 @@ footer {
 .topnav {
     display: block;
     padding-left: 120px;
-    height: 80px;
+    height: 78px;
     width: auto;
     background-color: var(--dark-purple-1);
 }
@@ -66,14 +68,19 @@ footer {
     font-size: 30px;
     margin-right: 8px;
   }
-.topnav.responsive a.icon {
+.topnav.responsive .icon {
     position: absolute;
     display: block;
     right: 0;
     top: 0;
+    font-size: 30px;
+    padding-right: 0px;
+    padding-top: 20px;
 }
 .topnav.responsive a:first-child {
     padding-top: 80px;
+    border-bottom: 1px solid;
+    border-color: var(--black);
 }
 .topnav.responsive a {
     display: block;
@@ -84,7 +91,30 @@ footer {
     padding-bottom: 22px;
     text-decoration: none;
     font-size: 30px;
+    background-color: var(--dark-purple-1);
   }
+.rezeptbox {
+    width: 320px;
+    height: 320px;
+    background-color: var(--light-purple-2);
+    border: 1px solid;
+    border-color: var(--black);
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.untertitel {
+    height: 50px;
+    margin-top: 269px;
+    background-color: var(--light-purple-1);
+    border-top: 1px solid;
+    border-color: var(--black);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
 @media screen and (min-width: 600px){
 
 	/* CSS für Tablets Hochformat grösser 600px */
