@@ -117,50 +117,32 @@ footer {
 }
 @media screen and (min-width: 600px){
 
-	/* CSS für Tablets Hochformat grösser 600px */
+.rezeptbox {
+    width: 400px;
+    height: 400px;
+    background-color: var(--light-purple-2);
+    border: 1px solid;
+    border-color: var(--black);
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.untertitel {
+    height: 50px;
+    margin-top: 349px;
+    background-color: var(--light-purple-1);
+    border-top: 1px solid;
+    border-color: var(--black);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
 
 } 
 
 @media screen and (min-width: 900px){
-	.topnav {
-        overflow: hidden;
-        background-color: var(--dark-purple-1);
-    }
-    .topnav a {
-        display: flexbox;
-        color: var(--black);
-    }
-    .topnav .icon {
-        display: none;
-    }
-
-} 
-
-@media screen and (min-width: 1200px){
-	body {
-        margin: 0px;
-        padding: 0px;
-        display: grid;
-        grid-template-rows: 80px auto 60px;
-        grid-template-areas: 
-        'header'
-        'main'
-        'footer';
-    }
-    header {
-        background-color: var(--dark-purple-1);
-        display: flexbox;
-        flex-direction: column;
-        position: sticky;
-        top: 0px;
-        grid-area: header;
-        border-bottom: 1px solid var(--black);
-    }
-    .child-div {
-        position: absolute;
-        height: 100%;
-        width: auto;
-    }
     .topnav {
         display: inline-block;
         padding-left: 120px;
@@ -185,32 +167,41 @@ footer {
     .topnav a.icon {
         display: none;
     }
+    .container {
+        display: flex ;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .rezeptbox {
+        width: 320px;
+        height: 320px;
+        background-color: var(--light-purple-2);
+        border: 1px solid;
+        border-color: var(--black);
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+    .untertitel {
+        height: 50px;
+        margin-top: 269px;
+        background-color: var(--light-purple-1);
+        border-top: 1px solid;
+        border-color: var(--black);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        color: var(--black);
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+    }
 } 
 
+@media screen and (min-width: 1200px){
+    
+}
+
 @media screen and (min-width: 1800px){
-	body {
-        margin: 0px;
-        padding: 0px;
-        display: grid;
-        grid-template-rows: 80px auto 60px;
-        grid-template-areas: 
-        'header'
-        'main'
-        'footer';
-    }
-    header {
-        background-color: var(--dark-purple-1);
-        display: flexbox;
-        flex-direction: column;
-        position: sticky;
-        top: 0px;
-        grid-area: header;
-        border-bottom: 1px solid var(--black);
-    }
-    .child-div {
-        display: inline-block;
-        position: absolute;
-    }
     .topnav {
         display: inline-block;
         padding-left: 120px;
