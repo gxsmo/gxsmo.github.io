@@ -17,9 +17,6 @@ body {
     'main'
     'footer';
 }
-h2 {
-    color: var(--black);
-}
 header {
     background-color: var(--dark-purple-1);
     display: flex;
@@ -195,34 +192,24 @@ footer {
         font-family: Arial, sans-serif;
         font-weight: bold;
     }
+    body {
+        height: 100vh;
+    }
 } 
 
 @media screen and (min-width: 1200px){
-    
+    body {
+        height: 100vh;
+    }
 }
 
 @media screen and (min-width: 1800px){
-    .topnav {
-        display: inline-block;
-        padding-left: 120px;
-        background-color: var(--dark-purple-1);
+    body {
+        height: 100vh;
     }
     .topnav a {
-        display: inline-block;
-        color: var(--black);
-        text-align: center;
+        height: 42px;
         padding: 14px 16px;
         padding-top: 22px;
-        text-decoration: none;
-        font-size: 30px;
       }
-      .topnav a:hover {
-        background-color: rgb(99, 72, 101);
-      }
-      .topnav a:active {
-        transform: translateY(1px);
-      }
-    .topnav .icon {
-        display: none;
-    }
 } 
