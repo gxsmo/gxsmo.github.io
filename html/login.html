@@ -24,6 +24,26 @@
     </header>
     <main>
         <p>Work in progress</p>
+        <div class="container">
+            <h1>
+                Anmeldeformular
+            </h1>
+                <form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+                    <fieldset class="mb-3">
+                        <legend>Personalien</legend>
+                        <div>
+                            <label for="vorname">Vorname *</label>
+                            <input type="text" name="vorname" id="vorname" required>
+                        </div>
+                        <div>
+                            <label for="nachname">Nachname *</label>
+                            <input type="text" name="nachname" id="nachname" required>
+                        </div>
+                        <input class="btn btn-success" type="submit">
+                        <input class="btn btn-danger" type="reset" value="Löschen">
+                    </fieldset>
+                </form>
+            </div>
     </main>
     <footer>
         <p>Made by Shania</p>
