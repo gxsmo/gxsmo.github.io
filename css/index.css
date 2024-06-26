@@ -7,16 +7,18 @@
 }
 
 body {
+    size: 100vh;
     margin: 0px;
     padding: 0px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80px 1fr 50px;
-    grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
 }
+
 header {
     background-color: var(--dark-purple-1);
     display: flex;
@@ -26,6 +28,7 @@ header {
     grid-area: header;
     border-bottom: 1px solid var(--black);
 }
+
 main {
     background-color: var(--light-purple-1);
     grid-area: main;
@@ -34,18 +37,21 @@ main {
     align-items: center;
     padding-bottom: 30px;
 }
+
 footer {
     background-color: var(--light-purple-2);
     grid-area: footer;
     display: flexbox;
     border-top: 1px solid var(--black);
 }
+
 .child-div {
     display: block;
     position: absolute;
     height: 100%;
     width: auto;
 }
+
 .topnav {
     display: block;
     padding-left: 120px;
@@ -53,9 +59,11 @@ footer {
     width: auto;
     background-color: var(--dark-purple-1);
 }
+
 .topnav a {
     display: none;
-  }
+}
+
 .topnav .icon {
     position: absolute;
     display: block;
@@ -64,7 +72,8 @@ footer {
     color: var(--black);
     font-size: 30px;
     margin-right: 8px;
-  }
+}
+
 .topnav.responsive .icon {
     position: absolute;
     display: block;
@@ -74,11 +83,13 @@ footer {
     padding-right: 0px;
     padding-top: 20px;
 }
+
 .topnav.responsive a:first-child {
     padding-top: 80px;
     border-bottom: 1px solid;
     border-color: var(--black);
 }
+
 .topnav.responsive a {
     display: block;
     color: var(--black);
@@ -89,7 +100,8 @@ footer {
     text-decoration: none;
     font-size: 30px;
     background-color: var(--dark-purple-1);
-  }
+}
+
 .rezeptbox {
     width: 320px;
     height: 320px;
@@ -99,6 +111,7 @@ footer {
     margin-top: 30px;
     border-radius: 20px;
 }
+
 .untertitel {
     height: 50px;
     margin-top: 269px;
@@ -112,39 +125,42 @@ footer {
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
-@media screen and (min-width: 600px){
 
-.rezeptbox {
-    width: 400px;
-    height: 400px;
-    background-color: var(--light-purple-2);
-    border: 1px solid;
-    border-color: var(--black);
-    margin-top: 30px;
-    border-radius: 20px;
+@media screen and (min-width: 600px) {
+
+    .rezeptbox {
+        width: 400px;
+        height: 400px;
+        background-color: var(--light-purple-2);
+        border: 1px solid;
+        border-color: var(--black);
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+
+    .untertitel {
+        height: 50px;
+        margin-top: 349px;
+        background-color: var(--light-purple-1);
+        border-top: 1px solid;
+        border-color: var(--black);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        color: var(--black);
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+    }
+
 }
-.untertitel {
-    height: 50px;
-    margin-top: 349px;
-    background-color: var(--light-purple-1);
-    border-top: 1px solid;
-    border-color: var(--black);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    text-align: center;
-    color: var(--black);
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-}
 
-} 
-
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) {
     .topnav {
         display: inline-block;
         padding-left: 120px;
         background-color: var(--dark-purple-1);
     }
+
     .topnav a {
         display: inline-block;
         color: var(--black);
@@ -154,22 +170,27 @@ footer {
         padding-bottom: 22px;
         text-decoration: none;
         font-size: 30px;
-      }
-      .topnav a:hover {
+    }
+
+    .topnav a:hover {
         background-color: rgb(99, 72, 101);
-      }
-      .topnav a:active {
+    }
+
+    .topnav a:active {
         transform: translateY(1px);
-      }
+    }
+
     .topnav a.icon {
         display: none;
     }
+
     .container {
-        display: flex ;
+        display: flex;
         justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     .rezeptbox {
         width: 320px;
         height: 320px;
@@ -179,6 +200,7 @@ footer {
         margin-top: 30px;
         border-radius: 20px;
     }
+
     .untertitel {
         height: 50px;
         margin-top: 269px;
@@ -192,24 +214,14 @@ footer {
         font-family: Arial, sans-serif;
         font-weight: bold;
     }
-    body {
-        height: 100vh;
-    }
-} 
-
-@media screen and (min-width: 1200px){
-    body {
-        height: 100vh;
-    }
 }
 
-@media screen and (min-width: 1800px){
-    body {
-        height: 100vh;
-    }
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1800px) {
     .topnav a {
         height: 42px;
         padding: 14px 16px;
         padding-top: 22px;
-      }
-} 
+    }
+}

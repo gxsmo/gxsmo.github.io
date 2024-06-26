@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,96 @@
     <link rel="icon" type="image/x-icon" href="../media/logo.png">
     <title>Felix Food - Login</title>
 </head>
+
 <body>
     <header>
         <div class="child-div">
             <img src="../media/logo.png" width="auto" height="80px" alt="Logo von Felix Food's">
         </div>
-        <div class="topnav" id="myTopnav">  
+        <div class="topnav" id="myTopnav">
             <a href="index.html">Home</a>
             <a href="rezepte.html">Rezepte</a>
             <a href="aboutUs.html">Über uns</a>
             <a href="login.html">Anmelden</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
         </div>
     </header>
     <main>
-        <p>Work in progress</p>
+        <h1>
+            Willkommen auf der Anmeldeseite von Felix Food!
+        </h1>
+        <p>Wenn Sie sich anmelden, dann bekommen Sie viele Bonusse.</p>
+        <ul>
+            <li>Früher Zugang zu den neusten Rezepten</li>
+            <li>Sie können Kommentare hinterlassen</li>
+            <li>Bewertungen für Rezepte abgeben</li>
+        </ul>
+        <p>Melden Sie sich nun kostenlos an!</p>
         <div class="container">
-            <h1>
+            <h2>
                 Anmeldeformular
-            </h1>
-                <form action="https://gibm.becknet.ch/formular/formular.php" method="post">
-                    <fieldset class="mb-3">
-                        <legend>Personalien</legend>
-                        <div>
-                            <label for="vorname">Vorname *</label>
-                            <input type="text" name="vorname" id="vorname" required>
-                        </div>
-                        <div>
-                            <label for="nachname">Nachname *</label>
-                            <input type="text" name="nachname" id="nachname" required>
-                        </div>
-                        <input class="btn btn-success" type="submit">
-                        <input class="btn btn-danger" type="reset" value="Löschen">
-                    </fieldset>
-                </form>
-            </div>
+            </h2>
+            <form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+                <fieldset>
+                    <legend>Personalien</legend>
+                    <div class="div-label">
+                        <label>Anrede *</label><br>
+
+                        <input class="radio" type="radio" name="anrede" id="frau" value="Frau" required>
+                        <label for="frau">Frau</label>
+
+                        <input class="radio" type="radio" name="anrede" id="herr" value="Herr">
+                        <label for="herr">Herr</label>
+
+                        <input class="radio" type="radio" name="anrede" id="divers" value="Divers">
+                        <label for="divers">Divers</label>
+                    </div>
+                    <div class="div-label">
+                        <label for="email">E-Mail *</label><br>
+                        <input type="email" name="email" id="email" placeholder="max.mustermann@gmail.com" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="vorname">Vorname *</label><br>
+                        <input type="text" name="vorname" id="vorname" minlength="1" maxlength="30" placeholder="Max" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="nachname">Nachname *</label><br>
+                        <input type="text" name="nachname" id="nachname" minlength="1" maxlength="30" placeholder="Mustermann" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="username">Username *</label><br>
+                        <input type="text" name="username" id="username" minlength="1" maxlength="40" placeholder="max.mustermann123" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="password">Passwort *</label><br>
+                        <input type="password" name="password" id="password" minlength="8" maxlength="30" placeholder="passwort" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="birthday">Geburtstag *</label><br>
+                        <input type="date" name="birthday" id="birthday" required>
+                    </div>
+                    <div class="div-label">
+                        <label for="class">Klasse</label><br>
+                        <select name="class" id="class">
+                            <option value="beginner">Anfänger</option>
+                            <option value="noob">Neukoch</option>
+                            <option value="medium">Koch</option>
+                            <option value="pro">Experte</option>
+                            <option value="felix">Felix</option>
+                        </select>
+                    </div>
+
+                    <input class="button" type="submit">
+                    <input class="button" type="reset" value="Löschen">
+                </fieldset>
+            </form>
+        </div>
     </main>
     <footer>
         <p>Made by Shania</p>
     </footer>
 </body>
+
 </html>
