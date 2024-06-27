@@ -27,6 +27,7 @@ header {
     top: 0px;
     grid-area: header;
     border-bottom: 1px solid var(--black);
+    z-index: 1000;
 }
 
 main {
@@ -110,11 +111,14 @@ footer {
     border-color: var(--black);
     margin-top: 30px;
     border-radius: 20px;
+    position: relative;
 }
 
 .untertitel {
     height: 50px;
-    margin-top: 269px;
+    width: 320px;
+    margin-top: 0;
+    bottom: 0px;
     background-color: var(--light-purple-1);
     border-top: 1px solid;
     border-color: var(--black);
@@ -124,6 +128,16 @@ footer {
     color: var(--black);
     font-family: Arial, sans-serif;
     font-weight: bold;
+    position: absolute;
+}
+.rezeptbox img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: .5s ease;
+}
+.rezeptbox img:hover {
+    opacity: 0.8;
 }
 
 @media screen and (min-width: 600px) {
@@ -136,11 +150,13 @@ footer {
         border-color: var(--black);
         margin-top: 30px;
         border-radius: 20px;
+        position: relative;
     }
 
     .untertitel {
         height: 50px;
-        margin-top: 349px;
+        width: 400px;
+        margin-top: 0;
         background-color: var(--light-purple-1);
         border-top: 1px solid;
         border-color: var(--black);
@@ -148,10 +164,16 @@ footer {
         border-bottom-right-radius: 20px;
         text-align: center;
         color: var(--black);
+        bottom: 0px;
         font-family: Arial, sans-serif;
         font-weight: bold;
+        position: absolute;
     }
-
+    .rezeptbox img {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -199,20 +221,24 @@ footer {
         border-color: var(--black);
         margin-top: 30px;
         border-radius: 20px;
+        position: relative;
     }
 
     .untertitel {
         height: 50px;
-        margin-top: 269px;
+        width: 320px;
+        margin-top: 0;
         background-color: var(--light-purple-1);
         border-top: 1px solid;
         border-color: var(--black);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+        bottom: 0px;
         text-align: center;
         color: var(--black);
         font-family: Arial, sans-serif;
         font-weight: bold;
+        position: absolute;
     }
 }
 
@@ -223,5 +249,8 @@ footer {
         height: 42px;
         padding: 14px 16px;
         padding-top: 22px;
+    }
+    body {
+        height: 100vh;
     }
 }

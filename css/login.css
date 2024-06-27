@@ -62,7 +62,6 @@ p {
 li {
     font-size: large;
 }
-
 .child-div {
     display: block;
     position: absolute;
@@ -79,26 +78,45 @@ li {
 }
 
 .topnav a {
-    display: inline-block;
+    display: none;
+}
+
+.topnav .icon {
+    position: absolute;
+    display: block;
+    right: 0;
+    padding-top: 20px;
     color: var(--black);
-    text-align: center;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.topnav.responsive .icon {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    padding-right: 0px;
+    padding-top: 20px;
+}
+
+.topnav.responsive a:first-child {
+    padding-top: 80px;
+    border-bottom: 1px solid;
+    border-color: var(--black);
+}
+
+.topnav.responsive a {
+    display: block;
+    color: var(--black);
+    text-align: right;
     padding: 14px 16px;
     padding-top: 22px;
     padding-bottom: 22px;
     text-decoration: none;
     font-size: 30px;
-}
-
-.topnav a:hover {
-    background-color: rgb(99, 72, 101);
-}
-
-.topnav a:active {
-    transform: translateY(1px);
-}
-
-.topnav a.icon {
-    display: none;
+    background-color: var(--dark-purple-1);
 }
 
 .div-label {
@@ -130,5 +148,51 @@ fieldset {
     border-color: var(--dark-purple-2);
 }
 .container {
-    width: 500px;
+    width: 300px;
+}
+@media screen and (min-width: 600px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .topnav {
+        display: inline-block;
+        padding-left: 120px;
+        background-color: var(--dark-purple-1);
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: var(--black);
+        text-align: center;
+        padding: 14px 16px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    .topnav a:hover {
+        background-color: rgb(99, 72, 101);
+    }
+
+    .topnav a:active {
+        transform: translateY(1px);
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1800px) {
+    .topnav a {
+        height: 42px;
+        padding: 14px 16px;
+        padding-top: 22px;
+    }
 }

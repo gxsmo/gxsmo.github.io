@@ -13,11 +13,12 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 80px 1fr 50px;
-    grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
 }
+
 header {
     background-color: var(--dark-purple-1);
     display: flex;
@@ -27,26 +28,31 @@ header {
     grid-area: header;
     border-bottom: 1px solid var(--black);
 }
+
 main {
     background-color: var(--light-purple-1);
     grid-area: main;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
+    padding-left: 16px;
     padding-bottom: 30px;
 }
+
 footer {
     background-color: var(--light-purple-2);
     grid-area: footer;
     display: flexbox;
     border-top: 1px solid var(--black);
 }
+
 .child-div {
     display: block;
     position: absolute;
     height: 100%;
     width: auto;
 }
+
 .topnav {
     display: block;
     padding-left: 120px;
@@ -54,22 +60,89 @@ footer {
     width: auto;
     background-color: var(--dark-purple-1);
 }
+
 .topnav a {
-    display: inline-block;
+    display: none;
+}
+
+.topnav .icon {
+    position: absolute;
+    display: block;
+    right: 0;
+    padding-top: 20px;
     color: var(--black);
-    text-align: center;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.topnav.responsive .icon {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    padding-right: 0px;
+    padding-top: 20px;
+}
+
+.topnav.responsive a:first-child {
+    padding-top: 80px;
+    border-bottom: 1px solid;
+    border-color: var(--black);
+}
+
+.topnav.responsive a {
+    display: block;
+    color: var(--black);
+    text-align: right;
     padding: 14px 16px;
     padding-top: 22px;
     padding-bottom: 22px;
     text-decoration: none;
     font-size: 30px;
-  }
-  .topnav a:hover {
-    background-color: rgb(99, 72, 101);
-  }
-  .topnav a:active {
-    transform: translateY(1px);
-  }
-.topnav a.icon {
-    display: none;
+    background-color: var(--dark-purple-1);
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 900px) {
+    .topnav {
+        display: inline-block;
+        padding-left: 120px;
+        background-color: var(--dark-purple-1);
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: var(--black);
+        text-align: center;
+        padding: 14px 16px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    .topnav a:hover {
+        background-color: rgb(99, 72, 101);
+    }
+
+    .topnav a:active {
+        transform: translateY(1px);
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1800px) {
+    .topnav a {
+        height: 42px;
+        padding: 14px 16px;
+        padding-top: 22px;
+    }
 }
