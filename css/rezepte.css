@@ -103,7 +103,53 @@ footer {
     background-color: var(--dark-purple-1);
 }
 
+h1 {
+    color: var(--black);
+}
+
+h3 {
+    color: var(--black);
+}
+
+h4 {
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+li:before {
+    content: "- ";
+    padding-right: 5px;
+}
+
 @media screen and (min-width: 600px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 2vw;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (min-width: 900px) {

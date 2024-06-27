@@ -62,6 +62,7 @@ p {
 li {
     font-size: large;
 }
+
 .child-div {
     display: block;
     position: absolute;
@@ -127,13 +128,16 @@ li {
     display: inline;
     width: 80px;
 }
+
 .radio {
     display: inline;
     width: 10px;
 }
+
 label {
     font-size: medium;
 }
+
 input {
     width: 300px;
 }
@@ -147,9 +151,11 @@ fieldset {
     color: var(--black);
     border-color: var(--dark-purple-2);
 }
+
 .container {
     width: 300px;
 }
+
 @media screen and (min-width: 600px) {
     .container {
         width: 500px;
