@@ -106,9 +106,10 @@ footer {
 .topleft {
     height: 400px;
     width: 400px;
+    margin-top: 10px;
     border: 2px solid;
     border-color: var(--black);
-    margin-top: 16px;
+    float: left;
 }
 
 .topleft img {
@@ -116,7 +117,37 @@ footer {
     width: 100%;
 }
 
-@media screen and (min-width: 600px) {}
+.container {
+    display: inline;
+}
+
+h1 {
+    color: var(--black);
+    margin-left: 200px;
+}
+
+.titel {
+    overflow: auto;
+}
+.rezept {
+    overflow: auto;
+}
+p {
+    margin-left: 18px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 2vw;
+    }
+    p {
+        font-size: 1.15vw;
+    }
+
+    ul {
+        font-size: 1.1vw;
+    }
+}
 
 @media screen and (min-width: 900px) {
     .topnav {
