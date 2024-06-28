@@ -130,6 +130,9 @@ li:before {
     content: "- ";
     padding-right: 5px;
 }
+.active {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 600px) {
     h1 {
